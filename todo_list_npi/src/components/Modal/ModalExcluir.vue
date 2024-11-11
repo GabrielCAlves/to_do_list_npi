@@ -14,7 +14,7 @@
                     Não
                 </v-btn>
 
-                <v-btn @click="$store.commit('removeTarefa', tarefa.id), $emit('edicaoConfirmada')" color="green">
+                <v-btn @click="$store.dispatch('removeTarefa', tarefa.id), $emit('edicaoConfirmada')" color="green">
                     Sim
                 </v-btn>
                 </template>

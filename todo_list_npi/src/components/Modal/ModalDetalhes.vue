@@ -7,7 +7,7 @@
             >
 
             <v-card title="Detalhes">
-                <p>{{ tarefa.descricao }}</p>
+                <p>{{ tarefa.description }}</p>
                 <template v-slot:actions>
                 <v-spacer></v-spacer>
 

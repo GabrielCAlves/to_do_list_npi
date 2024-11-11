@@ -55,10 +55,13 @@ export default defineComponent({
       }
     },
     handleAddTarefa(){
-      this.$store.commit('addTarefa', {title: this.inputField, descricao: this.inputField2});
+      this.$store.dispatch('addTarefa', {id: new Date().getTime(), title: this.inputField, description: this.inputField2, completed: false});
       this.inputField = null;
       this.inputField2 = null;
     }
+  },
+  mounted() {
+    this.$store.dispatch('fetchTarefas');
   },
 });
 </script>

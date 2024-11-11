@@ -9,7 +9,7 @@
             <v-card title="Editar" text="Informe o novo título/descrição">
                 <v-text-field class="px-3" label="Título" variant="outlined" v-model="title"></v-text-field>
                 
-                <v-text-field class="px-3" label="Descrição" variant="outlined" v-model="descricao"></v-text-field>
+                <v-text-field class="px-3" label="Descrição" variant="outlined" v-model="description"></v-text-field>
                 <template v-slot:actions>
                 <v-spacer></v-spacer>
 
@@ -17,7 +17,7 @@
                     Cancelar
                 </v-btn>
 
-                <v-btn @click="$store.commit('updateTarefa', {id: tarefa.id, title: title,  descricao: descricao}), $emit('edicaoConfirmada')" color="green">
+                <v-btn @click="$store.dispatch('updateTarefa', {id: tarefa.id, title: title,  description: description, completed: tarefa.completed}), $emit('edicaoConfirmada')" color="green">
                     Confirmar
                 </v-btn>
                 </template>
@@ -38,7 +38,7 @@
     },
     created(){
         this.title = this.tarefa.title
-        this.descricao = this.tarefa.descricao
+        this.description = this.tarefa.description
     }
   }
 </script>

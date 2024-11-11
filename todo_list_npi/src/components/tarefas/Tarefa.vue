@@ -4,9 +4,9 @@
       <template v-slot:prepend="{}">
         <div id="boxTitulo">
           <v-list-item-action start cols="8">
-            <v-checkbox-btn :model-value="tarefa.concluido"></v-checkbox-btn>
+            <v-checkbox-btn :model-value="tarefa.completed"></v-checkbox-btn>
           </v-list-item-action>
-          <v-list-item-title :class="{'text-decoration-line-through':tarefa.concluido}">{{ tarefa.title }}</v-list-item-title>
+          <v-list-item-title :class="{'text-decoration-line-through':tarefa.completed}">{{ tarefa.title }}</v-list-item-title>
         </div>
         
         <v-list-item id="menuOptions" right>
