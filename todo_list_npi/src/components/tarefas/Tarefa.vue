@@ -9,7 +9,7 @@
           <v-list-item-title :class="{'text-decoration-line-through':tarefa.concluido}">{{ tarefa.title }}</v-list-item-title>
         </div>
         
-        <v-list-item id="menuOptions">
+        <v-list-item id="menuOptions" right>
           <TarefaMenu :tarefa="tarefa" />
         </v-list-item>
       </template>
@@ -45,13 +45,13 @@ export default {
   width: 100%;
 }
 
-#options #boxTitulo{
-  display: flex;
-  width: 700px;
-  align-items: center;
+.v-list-item__prepend {
+  width: 100%;
 }
 
-#menuOptions{
-  margin-left: 300px;
+#options #boxTitulo{
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 </style>

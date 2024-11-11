@@ -6,7 +6,7 @@
             persistent
             >
 
-            <v-card title="Detalhes" text="Coloque uma caixa de texto não editável abaixo">
+            <v-card title="Detalhes">
                 <p>{{ tarefa.descricao }}</p>
                 <template v-slot:actions>
                 <v-spacer></v-spacer>
@@ -36,5 +36,11 @@
 </script>
 
 <style>
-
+p{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
 </style>
