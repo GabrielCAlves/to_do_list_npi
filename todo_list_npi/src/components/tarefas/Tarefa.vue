@@ -31,6 +31,7 @@ export default {
     toggleItem() {
       this.$store.commit('tarefaMarcada', this.tarefa);
       this.$emit('toggle-selection', this.tarefa.title);
+      this.$store.dispatch('updateTarefa', {id: this.tarefa.id, title: this.tarefa.title,  description: this.tarefa.description, completed: this.tarefa.completed})
     },
     handleRemoveTarefa(id){
       this.$store.commit('removeTarefa', id);

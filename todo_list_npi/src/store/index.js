@@ -25,6 +25,7 @@ export default createStore({
       if(tarefa){
         tarefa.title = novaTarefa.title;
         tarefa.description = novaTarefa.description;
+        tarefa.completed = novaTarefa.completed;
       }
     },
     removeTarefa(state, id){
